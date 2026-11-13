@@ -12,6 +12,10 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
+## Maintenance mode
+
+The dashboard is available by default. To enable maintenance mode on startup, change the initial value of `maintenanceModeSubject` to `true` in `src/app/core/services/maintenance.service.ts`. Navigation to `/dashboard` will redirect to `/maintenance`. The mode can also be changed at runtime with `MaintenanceService.setMaintenanceMode`; runtime changes are not persisted across reloads.
+
 ## Code scaffolding
 
 Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
